@@ -278,7 +278,67 @@
       </div>
     </div>
     <div class="zone-map reveal d2">
-      <iframe title="Zone d'intervention — Saint-Gobain (02)" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=2.90%2C49.40%2C3.86%2C49.78&amp;layer=mapnik&amp;marker=49.5847%2C3.3806"></iframe>
+      <svg class="zone-svg" viewBox="0 0 560 400" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte de la zone d'intervention autour de Saint-Gobain, dans l'Aisne : La Fère, Tergnier, Chauny, Coucy-le-Château, Anizy-le-Grand.">
+        <defs>
+          <radialGradient id="zoneGlow" cx="50%" cy="52%" r="52%">
+            <stop offset="0%" stop-color="var(--accent-bright)" stop-opacity=".30"/>
+            <stop offset="42%" stop-color="var(--accent)" stop-opacity=".15"/>
+            <stop offset="78%" stop-color="var(--accent)" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="zoneBg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#eef0ec"/>
+            <stop offset="100%" stop-color="#e5e8e3"/>
+          </linearGradient>
+        </defs>
+        <rect width="560" height="400" fill="url(#zoneBg)"/>
+        <!-- reliefs / courbes de fond -->
+        <g fill="none" stroke="rgba(32,42,54,.08)" stroke-width="1.3">
+          <path d="M-20 96 C 110 62 230 128 360 84 C 460 50 540 96 600 80"/>
+          <path d="M-20 168 C 130 140 250 196 400 156 C 500 130 560 168 600 150"/>
+          <path d="M-20 300 C 120 274 250 322 380 288 C 500 258 560 300 600 286"/>
+        </g>
+        <!-- riviere stylisee (l'Oise/l'Ailette, evocation) -->
+        <path d="M40 360 C 150 320 190 250 260 232 C 330 214 360 150 430 120 C 480 100 520 70 540 40" fill="none" stroke="rgba(90,120,150,.22)" stroke-width="4" stroke-linecap="round"/>
+        <!-- zone de couverture -->
+        <circle cx="280" cy="208" r="205" fill="url(#zoneGlow)"/>
+        <g fill="none" stroke="var(--accent)" stroke-opacity=".34" stroke-dasharray="2 7" stroke-linecap="round">
+          <circle cx="280" cy="208" r="96"/>
+          <circle cx="280" cy="208" r="152"/>
+        </g>
+        <!-- connecteurs -->
+        <g stroke="rgba(32,42,54,.32)" stroke-width="1.3" stroke-dasharray="1.5 6" stroke-linecap="round">
+          <line x1="280" y1="208" x2="258" y2="104"/>
+          <line x1="280" y1="208" x2="158" y2="134"/>
+          <line x1="280" y1="208" x2="100" y2="212"/>
+          <line x1="280" y1="208" x2="226" y2="318"/>
+          <line x1="280" y1="208" x2="402" y2="296"/>
+        </g>
+        <!-- communes -->
+        <g fill="var(--c-heading)" font-size="13" font-weight="500" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="3.4" stroke-linejoin="round">
+          <g stroke="none"><circle cx="258" cy="104" r="4.5" fill="var(--c-heading)"/></g>
+          <text x="258" y="90" fill="var(--c-text-soft)">La Fère</text>
+          <g stroke="none"><circle cx="158" cy="134" r="4.5" fill="var(--c-heading)"/></g>
+          <text x="158" y="120" fill="var(--c-text-soft)">Tergnier</text>
+          <g stroke="none"><circle cx="100" cy="212" r="4.5" fill="var(--c-heading)"/></g>
+          <text x="104" y="198" fill="var(--c-text-soft)">Chauny</text>
+          <g stroke="none"><circle cx="226" cy="318" r="4.5" fill="var(--c-heading)"/></g>
+          <text x="226" y="340" fill="var(--c-text-soft)">Coucy-le-Château</text>
+          <g stroke="none"><circle cx="402" cy="296" r="4.5" fill="var(--c-heading)"/></g>
+          <text x="402" y="318" fill="var(--c-text-soft)">Anizy-le-Grand</text>
+        </g>
+        <!-- pin Saint-Gobain -->
+        <ellipse cx="280" cy="250" rx="15" ry="4.5" fill="rgba(20,25,32,.16)"/>
+        <path d="M280 251 C 264 226 254 212 254 195 A 26 26 0 1 1 306 195 C 306 212 296 226 280 251 Z" fill="var(--accent)"/>
+        <circle cx="280" cy="193" r="10.5" fill="#fff"/>
+        <circle cx="280" cy="193" r="5" fill="var(--accent-deep)"/>
+        <text x="280" y="150" text-anchor="middle" font-size="16.5" font-weight="600" fill="var(--c-heading)" style="paint-order:stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">Saint-Gobain</text>
+        <!-- legende -->
+        <g>
+          <rect x="20" y="20" width="166" height="30" rx="15" fill="#fff" fill-opacity=".82"/>
+          <circle cx="39" cy="35" r="5" fill="var(--accent)"/>
+          <text x="52" y="39.5" font-size="12.5" font-weight="500" fill="var(--c-text-soft)">Zone d'intervention · Aisne (02)</text>
+        </g>
+      </svg>
     </div>
   </div>
 </section>

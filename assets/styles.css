@@ -307,8 +307,9 @@ body.menu-open .mobile-menu { opacity: 1; transform: none; pointer-events: auto;
 .zone-tag { padding: 9px 16px; border-radius: var(--r-pill); background: var(--c-surface); box-shadow: inset 0 0 0 1px var(--c-line); font-size: 14.5px; color: var(--c-text-soft); }
 a.zone-tag { transition: color .2s, box-shadow .2s; }
 a.zone-tag:hover { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-.zone-map { border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-sm); min-height: 380px; }
-.zone-map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; filter: grayscale(.25) contrast(.95); }
+.zone-map { border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-sm); min-height: 380px; background: linear-gradient(160deg, #eef0ec, #e6e9e4); position: relative; }
+.zone-svg { width: 100%; height: 100%; min-height: 380px; display: block; font-family: var(--font); }
+.zone-svg text { font-family: var(--font); }
 
 /* ===================== FAQ ===================== */
 .faq { display: grid; gap: 10px; }
