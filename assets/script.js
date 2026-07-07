@@ -2,6 +2,26 @@
 (function () {
   "use strict";
 
+  /* ---- Hero video: maximise l'autoplay (iOS strict, muet requis) ---- */
+  const heroVideo = document.querySelector(".hero video");
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.setAttribute("muted", "");
+    heroVideo.playsInline = true;
+    const tryPlay = () => {
+      const p = heroVideo.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+    tryPlay();
+    // Relance au 1er geste utilisateur (débloque après un mode économie d'énergie, etc.)
+    ["touchstart", "pointerdown", "click", "scroll"].forEach((ev) =>
+      window.addEventListener(ev, tryPlay, { once: true, passive: true })
+    );
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) tryPlay();
+    });
+  }
+
   /* ---- Navbar scroll state ---- */
   const onScroll = () => {
     document.body.classList.toggle("nav-scrolled", window.scrollY > 20);
