@@ -114,12 +114,12 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; color
   max-width: var(--maxw); margin-inline: auto;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 9px 9px 9px 22px; border-radius: var(--r-pill);
-  background: rgba(255,255,255,.6);
-  backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.5), 0 6px 22px rgba(32,42,54,.08);
+  background: rgba(255,255,255,.74);
+  backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 8px 26px rgba(32,42,54,.12);
   transition: background .3s, box-shadow .3s;
 }
-.nav-scrolled .nav { background: rgba(255,255,255,.82); box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 10px 28px rgba(32,42,54,.12); }
+.nav-scrolled .nav { background: rgba(255,255,255,.92); box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 0 12px 30px rgba(32,42,54,.16); }
 .brand { display: flex; align-items: center; gap: 11px; font-size: 19px; letter-spacing: -0.03em; color: var(--c-text); }
 .brand b { font-weight: 600; }
 .brand-txt { display: inline-flex; align-items: baseline; gap: 6px; line-height: 1; white-space: nowrap; }
