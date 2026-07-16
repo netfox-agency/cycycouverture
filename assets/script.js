@@ -103,6 +103,29 @@
     });
   });
 
+  /* ---- Cartes prestations → pré-remplir le champ Prestation du devis ---- */
+  const presMap = {
+    "Couverture neuve & rénovation": "Couverture neuve / rénovation",
+    "Couverture en tuile": "Couverture en tuile",
+    "Couverture en ardoise": "Couverture en ardoise",
+    "Zinc, alu & gouttières": "Couverture zinc / alu",
+    "Pose de charpente": "Pose de charpente",
+    "Pose de fenêtre de toit": "Pose de fenêtre de toit",
+    "Démoussage de toiture": "Démoussage de toiture",
+    "Réparation de toiture": "Réparation de toiture",
+  };
+  const presSelect = document.getElementById("prestation");
+  document.querySelectorAll("#prestations .svc-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const title = (card.querySelector("h3") || {}).textContent;
+      const val = presMap[(title || "").trim()];
+      if (presSelect && val) {
+        presSelect.value = val;
+        presSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    });
+  });
+
   /* ---- Footer year ---- */
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
