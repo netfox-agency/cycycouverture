@@ -39,7 +39,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; width: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; width: 100%; scroll-padding-top: 96px; }
 body {
   font-family: var(--font);
   background: var(--c-bg);
@@ -141,7 +141,7 @@ body.menu-open .nav-toggle span { background: transparent; }
 body.menu-open .nav-toggle span::before { top: 0; transform: rotate(45deg); }
 body.menu-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); }
 
-.mobile-menu { position: fixed; inset: 0; z-index: 99; background: rgba(244,245,243,.98); backdrop-filter: blur(20px); padding: 96px 24px 40px; display: flex; flex-direction: column; gap: 4px; opacity: 0; transform: translateY(-10px); pointer-events: none; transition: .3s; }
+.mobile-menu { position: fixed; inset: 0; z-index: 99; background: rgba(239,242,247,.98); backdrop-filter: blur(20px); padding: 96px 24px 40px; display: flex; flex-direction: column; gap: 4px; opacity: 0; transform: translateY(-10px); pointer-events: none; transition: .3s; }
 body.menu-open .mobile-menu { opacity: 1; transform: none; pointer-events: auto; }
 .mobile-menu a:not(.btn) { font-size: 22px; padding: 16px 8px; border-bottom: 1px solid var(--c-line); color: var(--c-text); }
 .mobile-menu .btn { margin-top: 18px; }
