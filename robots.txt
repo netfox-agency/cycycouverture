@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://votre-domaine.fr/sitemap.xml
+# Moteurs de recherche IA / génératifs (GEO) — explicitement autorisés
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://cycycouverture.netfoxfood.workers.dev/sitemap.xml

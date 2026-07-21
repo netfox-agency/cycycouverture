@@ -25,7 +25,7 @@ Nom, téléphone, WhatsApp, adresse (NAP), schema.org RoofingContractor + geo, c
 ## À COMPLÉTER avant mise en ligne (données client — rien inventé)
 1. **Clé Web3Forms** : dans `index.html`, remplacer `REMPLACER_PAR_VOTRE_CLE_WEB3FORMS`
    (gratuit sur web3forms.com). Sans clé valide, le formulaire affiche le repli téléphone.
-2. **Domaine** : remplacer `votre-domaine.fr` (canonical, og:url, schema `url`/`@id`) par le vrai
+2. **Domaine** : remplacer `cycycouverture.netfoxfood.workers.dev` (canonical, og:url, schema `url`/`@id`) par le vrai
    domaine une fois choisi.
 3. **Mentions légales** : compléter forme juridique, SIREN/SIRET, APE, assurance décennale
    (et email pro si l'entreprise en a un — non fourni, donc absent du site).
