@@ -436,6 +436,35 @@ a.zone-tag:hover { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accen
 .partner img { max-width: 100%; max-height: 50px; width: auto; height: auto; object-fit: contain; display: block; filter: grayscale(1); opacity: .48; transition: filter .35s ease, opacity .35s ease; }
 .partner:hover img { filter: grayscale(0); opacity: 1; }
 
+/* ===================== PAGES INTERNES (services / villes) ===================== */
+.page-hero { position: relative; padding: 128px 0 clamp(40px, 6vw, 68px); background: linear-gradient(160deg, #eef2f7 0%, #e6ebf2 100%); overflow: hidden; }
+.page-hero::before { content: ""; position: absolute; z-index: 0; width: 620px; height: 620px; border-radius: 50%; top: -320px; right: -160px; background: radial-gradient(circle, rgba(22,104,168,.14) 0%, rgba(22,104,168,0) 62%); pointer-events: none; }
+.page-hero .wrap { position: relative; z-index: 1; }
+.crumb { font-size: 13.5px; color: var(--c-text-mute); margin-bottom: 22px; }
+.crumb a { color: var(--c-text-soft); transition: color .2s; }
+.crumb a:hover { color: var(--accent); }
+.crumb span { margin: 0 8px; opacity: .6; }
+.page-hero h1 { font-size: clamp(30px, 5vw, 52px); letter-spacing: -0.035em; line-height: 1.04; max-width: 20ch; }
+.page-hero .lead { margin-top: 18px; max-width: 60ch; }
+.page-hero .hero-cta { margin-top: 28px; }
+
+.prose { max-width: 760px; }
+.prose h2 { font-size: clamp(23px, 3.2vw, 33px); letter-spacing: -0.025em; margin: 44px 0 14px; color: var(--c-heading); }
+.prose h3 { font-size: 20px; margin: 30px 0 8px; color: var(--c-text); letter-spacing: -0.01em; }
+.prose p { color: var(--c-text-soft); margin-bottom: 14px; }
+.prose > p:first-of-type { font-size: 18px; color: var(--c-text); }
+.prose strong { color: var(--c-text); font-weight: 600; }
+.prose ul.bullets { display: grid; gap: 11px; margin: 16px 0 22px; padding: 0; }
+.prose ul.bullets li { display: flex; gap: 12px; align-items: flex-start; color: var(--c-text-soft); }
+.prose ul.bullets li svg { width: 20px; height: 20px; color: var(--accent); flex: none; margin-top: 3px; }
+.prose .cta-line { margin-top: 30px; }
+
+/* liens de maillage (silo) */
+.links-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
+.link-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px; border-radius: var(--r-md); background: var(--c-surface); box-shadow: var(--sh-sm); color: var(--c-text); font-size: 15.5px; font-weight: 500; transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s; }
+.link-card:hover { transform: translateY(-3px); box-shadow: var(--sh-md); color: var(--accent-deep); }
+.link-card svg { width: 18px; height: 18px; color: var(--accent); flex: none; }
+
 /* ===================== RESPONSIVE ===================== */
 /* Nav complète (5 liens + tél + CTA) trop serrée sous ~1040px → menu hamburger */
 @media (max-width: 1040px) {
@@ -466,6 +495,8 @@ a.zone-tag:hover { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accen
   .brand > span { white-space: nowrap; }
   .svc, .also, .svc.svc-4, .steps, .footer-grid, .form .row { grid-template-columns: 1fr; }
   .partners { grid-template-columns: repeat(2, 1fr); }
+  .links-band { grid-template-columns: 1fr; }
+  .page-hero { padding-top: 104px; }
   /* Galerie & avis = carrousel horizontal à snap (feel app-like) */
   .gallery, .reviews {
     display: flex; grid-template-columns: none; grid-auto-rows: auto;

@@ -103,28 +103,32 @@
     });
   });
 
-  /* ---- Cartes prestations → pré-remplir le champ Prestation du devis ---- */
+  /* ---- Pré-remplir la prestation du devis depuis ?devis=… (venant des pages services) ---- */
   const presMap = {
-    "Couverture neuve & rénovation": "Couverture neuve / rénovation",
-    "Couverture en tuile": "Couverture en tuile",
-    "Couverture en ardoise": "Couverture en ardoise",
-    "Zinc, alu & gouttières": "Couverture zinc / alu",
-    "Pose de charpente": "Pose de charpente",
-    "Pose de fenêtre de toit": "Pose de fenêtre de toit",
-    "Démoussage de toiture": "Démoussage de toiture",
-    "Réparation de toiture": "Réparation de toiture",
+    renovation: "Couverture neuve / rénovation",
+    tuile: "Couverture en tuile",
+    ardoise: "Couverture en ardoise",
+    zinc: "Couverture zinc / alu",
+    gouttiere: "Pose de gouttière zinc",
+    fenetre: "Pose de fenêtre de toit",
+    demoussage: "Démoussage de toiture",
+    charpente: "Pose de charpente",
+    reparation: "Réparation de toiture",
   };
   const presSelect = document.getElementById("prestation");
-  document.querySelectorAll("#prestations .svc-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const title = (card.querySelector("h3") || {}).textContent;
-      const val = presMap[(title || "").trim()];
-      if (presSelect && val) {
-        presSelect.value = val;
-        presSelect.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-    });
-  });
+  try {
+    const key = new URLSearchParams(window.location.search).get("devis");
+    const val = key && presMap[key];
+    if (presSelect && val) {
+      presSelect.value = val;
+      presSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      const devis = document.getElementById("devis");
+      if (devis)
+        requestAnimationFrame(() =>
+          devis.scrollIntoView({ behavior: "smooth", block: "start" })
+        );
+    }
+  } catch (e) {}
 
   /* ---- Footer year ---- */
   const y = document.getElementById("year");
