@@ -1,10 +1,10 @@
-# Cycy.Couverture Zinguerie — Couvreur à Saint-Gobain (Aisne, 02)
+# Cycy.Couverture Zinguerie · Couvreur à Saint-Gobain (Aisne, 02)
 
 > Entreprise artisanale de couverture et zinguerie basée à Saint-Gobain (02410), intervenant à Saint-Gobain et dans tout l'Aisne pour les particuliers et les professionnels. Pose, rénovation, entretien et réparation de tous types de toiture. Devis gratuit, travaux couverts par l'assurance décennale.
 
 ## Coordonnées
 - Nom : Cycy.Couverture Zinguerie
-- Métier : Couvreur — Zingueur
+- Métier : Couvreur · Zingueur
 - Adresse : 15 Rte de la Fère, 02410 Saint-Gobain, Aisne, Hauts-de-France, France
 - Téléphone : 07 69 87 80 07
 - Site : https://cycycouverture.netfoxfood.workers.dev/
