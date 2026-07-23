@@ -120,11 +120,14 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.08; color
   transition: background .3s, box-shadow .3s;
 }
 .nav-scrolled .nav { background: rgba(255,255,255,.92); box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), 0 12px 30px rgba(32,42,54,.16); }
-.brand { display: flex; align-items: center; gap: 11px; font-size: 19px; letter-spacing: -0.03em; color: var(--c-text); }
-.brand b { font-weight: 600; }
-.brand-txt { display: inline-flex; align-items: baseline; gap: 6px; line-height: 1; white-space: nowrap; }
-.brand-txt .bd { font-size: .78em; font-weight: 400; color: var(--c-text-soft); letter-spacing: -0.01em; }
-.footer .brand-txt .bd { color: rgba(255,255,255,.6); }
+.brand { display: flex; align-items: center; color: var(--c-text); }
+.brand-txt { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 3px; line-height: 1; white-space: nowrap; }
+.brand b { font-weight: 800; font-size: 23px; letter-spacing: -0.045em; color: var(--c-heading); }
+.brand .dot { font-style: normal; color: var(--accent); }
+.brand-txt .bd { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--c-text-soft); }
+.footer .brand b { color: #fff; }
+.footer .brand .dot { color: var(--accent-bright); }
+.footer .brand-txt .bd { color: rgba(255,255,255,.5); letter-spacing: .2em; }
 .brand-mark { width: 40px; height: 32px; flex: none; display: grid; place-items: center; color: var(--accent); }
 .brand-mark svg { width: 100%; height: 100%; }
 .nav-links { display: flex; align-items: center; gap: 30px; }
@@ -520,7 +523,8 @@ a.zone-tag:hover { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accen
   .nav-toggle { display: grid; }
   .nav-shell { inset: 10px 0 auto 0; }
   .nav { padding: 8px 8px 8px 18px; }
-  .brand { font-size: 17px; }
+  .brand b { font-size: 20px; }
+  .brand-txt .bd { font-size: 9px; letter-spacing: .16em; }
   .brand > span { white-space: nowrap; }
   .svc, .also, .svc.svc-4, .steps, .footer-grid, .form .row { grid-template-columns: 1fr; }
   .partners { grid-template-columns: repeat(2, 1fr); }
