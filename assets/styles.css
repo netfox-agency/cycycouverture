@@ -481,6 +481,12 @@ a.zone-tag:hover { color: var(--accent); box-shadow: inset 0 0 0 1px var(--accen
 .prose ul.bullets li { display: flex; gap: 12px; align-items: flex-start; color: var(--c-text-soft); }
 .prose ul.bullets li svg { width: 20px; height: 20px; color: var(--accent); flex: none; margin-top: 3px; }
 .prose .cta-line { margin-top: 30px; }
+.prose .table-wrap { overflow-x: auto; margin: 18px 0 8px; -webkit-overflow-scrolling: touch; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 440px; }
+.prose thead th { text-align: left; padding: 12px 14px; color: var(--c-heading); font-weight: 600; background: var(--c-surface); border-bottom: 2px solid rgba(22,104,168,.18); white-space: nowrap; }
+.prose tbody td { padding: 12px 14px; color: var(--c-text-soft); border-bottom: 1px solid rgba(20,32,50,.09); }
+.prose tbody td:first-child { color: var(--c-text); font-weight: 600; }
+.prose tbody tr:hover td { background: rgba(22,104,168,.04); }
 
 /* liens de maillage (silo) */
 .links-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
